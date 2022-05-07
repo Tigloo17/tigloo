@@ -3,8 +3,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
+    
+    entry: ['./resources/sass/app.scss', './resources/js/app.js'],
+    
     output: {
         filename: './js/app.js',
+        publicPath: '/',
         path: path.resolve(__dirname, 'public')
     },
 
@@ -25,5 +29,12 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "./css/[name].css",
+            chunkFilename: "./css/[id].[hash].css"
+        })
+    ]
 }
