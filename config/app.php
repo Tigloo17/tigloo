@@ -3,9 +3,8 @@
 return [
 
     "providers" => [
-        \Tigloo\Base\Provider\HttpServiceProvider::class,
-        \Tigloo\Base\Provider\RouteServiceProvider::class,
-        \Tigloo\Base\Provider\TwigServiceProvider::class,
-        \Tigloo\Base\Provider\DatabaseServiceProvider::class
+        \Tigloo\Provider\HttpServiceProvider::class,
+        \Tigloo\Provider\TwigServiceProvider::class,
+        \Tigloo\Provider\DatabaseServiceProvider::class
     ]
 ];
